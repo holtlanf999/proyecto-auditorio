@@ -11,11 +11,6 @@ label{
 	font-weight: 100;
 }
 
-input{
-	background-color: transparent;
-	margin: 2em 0 0 0;
-}
-
 h1{
 	font-family: Oswald;
 }
@@ -28,11 +23,6 @@ h1 span{
 
 h2{
 	font-family: Oswald;
-}
-
-select{
-	color: #000;
-	margin: 2em 0 0 0;
 }
 
 .table-container{
