@@ -13,11 +13,16 @@
 	$ticket = $_POST['entradas'];
 
 	$concert = new drawConcertTable();
-	$itemsQuant = $concert->countTicketsItems($_GET['id'])->count;
 
+	//Get the quantity of tickets in the table ENTRADA
+	$itemsQuant = $concert->countTicketsItems($_GET['id'])->count;
 	echo $itemsQuant;
-	$insertTicket = $concert->insertEntrada($idEntrada, $_GET['id']);
-	echo $ticket;
+
+	for ($i=0; $i < $ticket; $i++) { 
+		$insertTicket = $concert->insertEntrada($itemsQuant + $i, $_GET['id']);
+	}
+	
+	$expectator = $concert->insertEspectador($userId, $name, $email, $ticket, $_GET['id']);
 	
 	include("views/footer.php");
 ?>
