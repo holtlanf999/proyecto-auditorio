@@ -67,6 +67,13 @@ body {
 	text-decoration: none;
 }
 
+.info-event{
+	font-family: Oswald;
+	font-size: 2em;
+	margin-left: 1%;
+	padding: 1%;
+}
+
 /* ========================== second page ========================= */
 
 .buy_page{

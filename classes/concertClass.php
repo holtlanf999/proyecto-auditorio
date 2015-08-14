@@ -28,6 +28,25 @@ class drawConcertTable extends Database{
 		return false;
 	}
 
+	function eventInfo($id){
+
+		// get event items depending on id in concierto table
+		$query = $this->connection->prepare('SELECT idConcierto, tituloConcierto, fechaConcierto, horaConcierto, duracionConcierto, precioConcierto FROM concierto WHERE idConcierto = :id');
+
+		// bind data
+		$bind = array(
+			':id' => $id
+		);
+
+		// execute the query
+		if($query->execute($bind)){
+
+			// return the query result
+			return $query->fetchAll();
+		}
+		return false;
+	}
+
 	function countTicketsItems($idConcierto){
 		// get all items 
 		$query = $this->connection->prepare('SELECT COUNT(codEntrada) count FROM entrada WHERE idConcierto = :idConcierto');
