@@ -3,11 +3,10 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-
-echo
-'<div class="col-md-4 table-container">
+echo'
+<div class="col-md-4 table-container">
 	<h2>Compra las entradas para el evento</h2>		
-	<form action="thanks.php?id='.$_GET['id'].'" method="POST">
+	<form name="ticketForm" action="thanks.php?id='.$_GET['id'].'" method="POST">
 		<div class="form-group col-md-12">
 			<label for="name">Nombre completo</label>
 			<input type="text" class="form-control" name="name" id="name" placeholder="Nombre completo"><br>
@@ -23,9 +22,12 @@ echo
 			</select><br>
 			<label for="email">Correo electrónico</label>
 			<input type="email" class="form-control" name="email" id="email" placeholder="Correo electrónico"><br>
-			<input type="submit" class="form-control btn-buy-ticket btn-success">
+			<input type="submit" class="form-control btn-buy-ticket btn-success" id="submit-btn">
 		</div>
 	</form>
-</div>';
+</div>
+';
+
+include('form-scripts.php');
 
 ?>

@@ -29,7 +29,7 @@
 	$expectator = $concert->insertEspectador( $userId, $name, $email, $ticket, $_GET['id'] );
 
 	echo'
-		<div class="col-md-6">
+		<div class="col-md-6 event-info">
 		<p>El total a pagar por las '.$ticket.' entradas es de: &#8353 '.( $print * $ticket ).'.</p> 
 			<p>Gracias por su compra</p>
 		</div>
