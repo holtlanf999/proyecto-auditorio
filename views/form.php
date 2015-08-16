@@ -22,7 +22,7 @@ echo'
 			</select><br>
 			<label for="email">Correo electrónico</label>
 			<input type="email" class="form-control" name="email" id="email" placeholder="Correo electrónico"><br>
-			<input type="submit" class="form-control btn-buy-ticket btn-success" id="submit-btn">
+			<input type="submit" value="Comprar" class="form-control btn-buy-ticket btn-success" id="submit-btn">
 		</div>
 	</form>
 </div>

@@ -12,6 +12,13 @@
 	$userId = $_POST['userId'];
 	$email = $_POST['email'];
 	$ticket = $_POST['entradas'];
+	$ticketResponse = '';
+
+	if( $ticket == 1 ){
+		$ticketResponse = '<p>El total a pagar por tu entrada es de: ';
+	} else {
+		$ticketResponse = '<p>El total a pagar por tus '.$ticket.' entradas es de: ';
+	}
 	
 
 	$concert = new drawConcertTable();
@@ -29,9 +36,10 @@
 	$expectator = $concert->insertEspectador( $userId, $name, $email, $ticket, $_GET['id'] );
 
 	echo'
-		<div class="col-md-6 event-info">
-		<p>El total a pagar por las '.$ticket.' entradas es de: &#8353 '.( $print * $ticket ).'.</p> 
-			<p>Gracias por su compra</p>
+		<div class="col-md-6 thanks-msj">'
+		.$ticketResponse.'<span>'.( $print * $ticket ).' colones.<span></p> 
+			<p>Gracias por su compra!</p>
+			<a href="index.php" class="btn-buy-ticket btn-success">Volver al inicio</a>
 		</div>
 	';
 	

@@ -78,7 +78,7 @@ INSERT INTO `concierto` (`idConcierto`, `fechaConcierto`, `horaConcierto`, `titu
 ('I', '2016-04-22', '18:00', 'The Journey', '2h', 10100, 5, 2, NULL, 6, NULL),
 ('J', '2015-07-12', '22:00', 'Sistema del sonido molecular', '2h40min', 35550, 3, 1, 2, NULL, NULL),
 ('K', '2015-07-12', '22:30', 'Rodeando latas', '2h', 40000, 3, 1, NULL, 10, NULL),
-('L', '2016-04-24', '12:00', 'Carismático', '3h', 30500, 4, 2, NULL, NULL, '6 66666666');
+('L', '2016-04-24', '12:00', 'Carisma tico', '3h', 30500, 4, 2, NULL, NULL, '6 66666666');
 
 -- --------------------------------------------------------
 
